@@ -35,6 +35,8 @@ import SaveDatasetFilterDialog from './SaveDatasetViewDialog';
 import SaveSetDialog from './SaveSetDialog';
 import SideBar from './SideBar';
 
+import EmbeddingEpivizChart from './EmbeddingEpivizChart';
+
 const lightTheme = createTheme(
     {
         "palette": {
@@ -144,6 +146,7 @@ class App extends PureComponent {
                             >
                                 <EmbeddingChart onGallery={this.onGallery} setTooltip={this.setTooltip}/>
                                 <DraggableDivider/>
+                                <EmbeddingEpivizChart/>
                                 <div ref={this.galleryRef}>
                                     <GalleryCharts/>
                                 </div>
