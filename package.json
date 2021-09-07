@@ -12,6 +12,7 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^12.0.0",
     "@testing-library/user-event": "^13.1.9",
+    "@webcomponents/webcomponentsjs": "^2.6.0",
     "canvas2svg": "^1.0.16",
     "classnames": "^2.3.1",
     "d3-array": "^2.12.1",
@@ -38,6 +39,7 @@
     "scatter-gl": "git+https://github.com/joshua-gould/scatter-gl.git#1.0.1",
     "simplify-js": "^1.2.4",
     "three": "^0.129.0",
+    "vendor-copy": "^3.0.1",
     "web-vitals": "^2.0.1"
   },
   "scripts": {
@@ -45,7 +47,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "postinstall": "vendor-copy"
   },
   "eslintConfig": {
     "extends": [
@@ -71,5 +74,15 @@
     "jest-puppeteer": "^5.0.4",
     "puppeteer": "^10.0.0",
     "typescript": "^4.3.4"
-  }
+  },
+  "vendorCopy": [
+    {
+      "from": "node_modules/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js",
+      "to": "public/vendor/custom-elements-es5-adapter.js"
+    },
+    {
+      "from": "node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js",
+      "to": "public/vendor/webcomponents-bundle.js"
+    }
+  ]
 }
