@@ -538,7 +538,7 @@ class ScatterChartThree extends React.PureComponent {
 
             <div data-testid='scatter-chart-three' style={{
                 display: 'inline-block',
-                width: this.props.chartSize.width,
+                width: this.props.chartSize.width - 300,
                 height: this.props.chartSize.height
             }}
                  ref={this.containerElementRef}>

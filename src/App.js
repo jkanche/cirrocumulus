@@ -143,13 +143,21 @@ class App extends PureComponent {
                             <div
                                 role="tabpanel"
                                 hidden={tab !== 'embedding'}
+                                style={{display: 'flex'}}
                             >
-                                <EmbeddingChart onGallery={this.onGallery} setTooltip={this.setTooltip}/>
-                                <DraggableDivider/>
-                                <EmbeddingEpivizChart/>
-                                <div ref={this.galleryRef}>
+                                <div>
+                                    <EmbeddingChart onGallery={this.onGallery} setTooltip={this.setTooltip}/>
+                                    <DraggableDivider/>
+                                    <EmbeddingEpivizChart/>
+                                </div>
+                                <div>
+                                <div ref={this.galleryRef}
+                                     style={{height: '930px', overflowY: 'auto'}}
+                                >
                                     <GalleryCharts/>
                                 </div>
+                                </div>
+                                
                             </div>
                             <div
                                 role="tabpanel"
